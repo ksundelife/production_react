@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        // папка для сборки продакшн (собираю с помощью webpack)
+        "outDir": "./build/",
+        // подсвечивает все места, где не указан тип
+        // Если тип не явный, то нужно будет явно указать тип any
+        "noImplicitAny": true,
+        // какой стандарт для работы с модулями используем
+        "module": "ESNext",
+        // в какую спецификацию компилируем: для поддержки большинства браузеров
+        "target": "es5",
+        "jsx": "react",
+        // компилятор будет обрабатывать не только TS файлы, но и JS файлы
+        "allowJs": true,
+        // используется для определения того, к чему относится импорт.
+        // В данном случае при поиске модулей используется стратегия node
+        "moduleResolution": "node",
+        // флаг esModuleInterop позволяет работать с пакетами, которые используют CommonJs стандарт,
+        // как с обычными пакетами ESmodules стандарта, те, с помощью import
+        // (require() module.exports) = CommonJs стандарт
+        "esModuleInterop": true,
+        // флаг allowSyntheticDefaultImports позволяет импортировать библиотеки, которые не имеют default import 
+        // вместо - import * as path from "path";, где, с помощью "* as" явно говорим, что хотим импортировать все из пакета
+        // так - import path from "path";
+        "allowSyntheticDefaultImports": true,
+    },
+    // если при сборке используем спецификацию модуляции отличную от CommonJs
+    // устанавливаем переопределение для ts-node
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    }
+}
