@@ -27,6 +27,11 @@
         "allowSyntheticDefaultImports": true,
         // auto import
         "checkJs": true,
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules"
+            }
+        ]
     },
     // если при сборке используем спецификацию модуляции отличную от CommonJs
     // устанавливаем переопределение для ts-node
