@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import { AboutPageAsync } from "./components/pages/AboutPage/AboutPage.async";
-import { MainPageAsync } from "./components/pages/MainPage/MainPage.async";
-import "./index.sass";
+import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
+import { MainPageAsync } from "./pages/MainPage/MainPage.async";
+import "./styles/index.sass";
 
 const App = () => {
 
