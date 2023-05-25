@@ -7,7 +7,7 @@ import "./styles/index.sass";
 const App = () => {
 
     return (
-        <div className="app">
+        <div className="app light">
             <Link to={"/"}>Main</Link>
             <Link to={"/about"}>About</Link>
             <Suspense fallback={<div>Loading...</div>}>
