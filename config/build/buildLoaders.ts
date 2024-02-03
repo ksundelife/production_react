@@ -1,6 +1,6 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import webpack from "webpack";
-import { BuildOptions } from "./types/config";
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import webpack from "webpack"
+import { BuildOptions } from "./types/config"
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 
@@ -24,17 +24,17 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                 // Compiles Sass to CSS
                 "sass-loader",
             ],
-        };
+        }
 
     // Если не используем typescript - нужен babel-loader
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
-    };
+    }
 
     return [
         typescriptLoader,
         cssLoader,
-    ];
+    ]
 }

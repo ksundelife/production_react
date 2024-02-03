@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useState } from "react"
 
 const AboutPage = () => {
-    const [ ,set] = useState();
+    const [ ,set] = useState()
     
     return (
         <div>
             about page
         </div>
-    );
-};
+    )
+}
 
-export default AboutPage;
+export default AboutPage
